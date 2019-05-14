@@ -1,0 +1,73 @@
+<!--Danny Perkins, dgp3sy@virginia.edu-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<link rel='stylesheet' href='gpa_style.css' type='text/css' />
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+	
+</head>
+<body>
+	<div class="form-center">
+		<h1> Final Exam Grade Calculator</h1>
+	  <div class="inner-form">
+		 <form class="gpa" name = "gpa" method="POST" action="calculate.php" >
+
+		 	<div class="input_fields_wrap">
+			<label>Component 1: </label>
+			<input type="text" name="name[]" placeholder="Name">
+			<input type="text" name="percent[]" placeholder="Percent of Final Grade">
+			<input type="text" name="score[]" placeholder="Score"><br/><br/>
+
+			</div>
+
+		    <label class="text">Enter Desired Overall Grade: </label>
+		    <input type="text" name ="desired_score"  required/> <br/>
+
+
+			<button class="add_field_button">Add More Fields</button>
+		    <input class="submit-button" type="submit" value="Calculate Score" />  
+		  </form>
+		</div>
+	 </div>
+</body>
+
+	<footer class="primary-footer container">
+      <small class="copyright">&copy; Daniel Perkins | 2019 | All Rights Reserved</small>
+      <nav class="nav">
+      </nav>
+    </footer>
+</html>
+
+
+   <!-- use input type="submit" with the required attribute -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2"> </script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	var max_fields = 10; //maximum input boxes allowed
+	var wrapper = $(".input_fields_wrap"); //Fields wrapper
+	var add_button = $(".add_field_button"); //Add button ID
+	
+	var x = 1; //initlal text box count
+
+	$(add_button).click(function(e){ //on add input button click
+		e.preventDefault();
+
+		if(x < max_fields){ //max input box allowed
+			x++; //text box increment
+			var fieldHTML = '<div class="form-group"><label>Component ' + x + ': </label> <input type="text" name="name[]" placeholder="Name"> <input type="text" name="percent[]" placeholder="Percent of Final Grade"> <input type="text" name="score[]" placeholder="Score"></div></br>'
+			$(wrapper).append(fieldHTML); //add input box
+		}
+	});
+	
+	$(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+		e.preventDefault(); 
+		$(this).parents('from-group').remove(); 
+		x--;
+	})
+});
+</script>
+
+

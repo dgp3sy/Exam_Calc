@@ -1,0 +1,97 @@
+body {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  background: #7474BF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+h1 {
+ font-family: 'Quicksand', sans-serif;
+ font-color: #FFFFFF;
+ font-weight: 300;
+ font-size: 48px;
+}
+
+.input_fields_wrap {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+label {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.gpa {
+  padding: 10px;
+}
+.form-center {
+  text-align: center;
+  position: relative;
+  min-height: 91vh;
+  height: 100%;
+}
+.inner-form {
+  border-style: solid;
+  box-shadow: 2px 2px 1px;
+  border-radius: 25px;
+  margin-left: 300px;
+  margin-right: 300px;
+  border-color: #000000;
+}
+.submit-button, .add_field_button {
+  color: white;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  background-color: #808B9B; 
+  color: black; 
+  border: 0px;
+}
+.add_field_button:hover {
+  font-color: black;
+  background-color: #BDC5D1;
+}
+.submit-button:hover {
+  font-color: black;
+  background-color: #BDC5D1;
+}
+.primary-footer {
+  height: 2rem;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+.result {
+  font-size: 48px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+
+}
+.final-php {
+  border-style: solid;
+  box-shadow: 2px 2px 1px;
+  border-radius: 25px;
+  margin-left: 300px;
+  margin-right: 300px;
+  border-color: #000000;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+
+
+}
+
